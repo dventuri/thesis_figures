@@ -3,7 +3,7 @@
 # description: style sheet for Matplotlib figures.
 
 
-figure.figsize : 5.5, 3.5
+figure.figsize : 5.5, 4.125
 axes.labelsize : 10
 legend.fontsize : 9
 legend.handlelength: 2.5

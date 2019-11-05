@@ -13,12 +13,13 @@ ax.set_xlabel(r'$\mathrm{Re}_y$')
 ax.axis([185, 215.0, 0, 1])
 ax.xaxis.set_major_locator(plt.MultipleLocator(10))
 ax.xaxis.set_minor_locator(plt.MultipleLocator(5))
-ax.yaxis.set_major_locator(plt.MultipleLocator(0.2))
-ax.yaxis.set_minor_locator(plt.MultipleLocator(0.1))
+ax.yaxis.set_major_locator(plt.MultipleLocator(0.25))
+ax.yaxis.set_minor_locator(plt.MultipleLocator(0.25/2))
 ax.plot(Rey, lambdaa,
         color='black',
         linewidth=1,
         linestyle='-')
+ax.grid(True)
 fig.tight_layout(pad=0.01)
 plt.savefig('2lKEps_lambda.pdf',
             format='pdf')
