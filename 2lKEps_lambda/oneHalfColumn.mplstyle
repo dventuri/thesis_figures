@@ -4,7 +4,7 @@
 
 
 figure.figsize : 5.5, 4.125
-axes.labelsize : 10
+axes.labelsize : 12
 legend.fontsize : 9
 legend.handlelength: 2.5
 xtick.labelsize : 10
