@@ -106,7 +106,7 @@ ax.annotate("Stokes drag",(5,1),
             color='gray')
 plt.legend(frameon=True,framealpha=1)
 fig.tight_layout(pad=0.01)
-plt.savefig('drag_dilute.pdf',
+plt.savefig('drag/drag_dilute.pdf',
             format='pdf')
 
 

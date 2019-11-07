@@ -21,5 +21,5 @@ ax.plot(Rey, lambdaa,
         linestyle='-')
 ax.grid(True)
 fig.tight_layout(pad=0.01)
-plt.savefig('2lKEps_lambda.pdf',
+plt.savefig('2lKEps_lambda/2lKEps_lambda.pdf',
             format='pdf')
