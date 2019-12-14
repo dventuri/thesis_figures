@@ -160,8 +160,6 @@ ax.scatter(uf, rf, s=20,
            edgecolor='black',
            label='Exp. RMS')
 ax.legend(title='RSM',loc='best')
-ax.arrow(1.3, -0.6, 0, -0.25, head_width=0.04, head_length=0.08, fc='k', ec='k')
-ax.annotate(r'$g$',(1.32,-0.75),fontsize=12)
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/partVelocity/Huber1998_pipe_case3_RSM_partVel.pdf',
             format='pdf')
@@ -202,8 +200,6 @@ ax.scatter(up, r, s=20,
            edgecolor='black',
            label='Exp. average')
 ax.legend(title=r'$k$-$\varepsilon$',loc='best')
-ax.arrow(1.3, -0.6, 0, -0.25, head_width=0.04, head_length=0.08, fc='k', ec='k')
-ax.annotate(r'$g$',(1.32,-0.75),fontsize=12)
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/partVelocity/Huber1998_pipe_case3_KE_analiticVsRK2_partVel.pdf',
             format='pdf')
