@@ -203,3 +203,45 @@ ax.legend(title=r'$k$-$\varepsilon$',loc='best')
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/partVelocity/Huber1998_pipe_case3_KE_analiticVsRK2_partVel.pdf',
             format='pdf')
+
+# Particle velocity - KE vs RSM
+fig, ax = plt.subplots()
+ax.set_ylabel(r'$y/R$')
+ax.set_xlabel(r'$U_p/U_{p,avg}$')
+ax.axis([0, 1.4, -1, 1])
+ax.xaxis.set_major_locator(plt.MultipleLocator(0.2))
+ax.xaxis.set_minor_locator(plt.MultipleLocator(0.1))
+ax.yaxis.set_major_locator(plt.MultipleLocator(0.5))
+ax.yaxis.set_minor_locator(plt.MultipleLocator(0.25))
+ax.plot(up4_ke, r4_ke,
+        color='black',
+        linewidth=1,
+        linestyle='-',
+        label='Sim. $k$-$\\varepsilon$')
+ax.plot(up4_rsm, r4_rsm,
+        color='black',
+        linewidth=1,
+        linestyle='--',
+        label='Sim. RSM')
+ax.plot(uf4_ke, rf4_ke,
+        color='black',
+        linewidth=1,
+        linestyle='-')
+ax.plot(uf4_rsm, rf4_rsm,
+        color='black',
+        linewidth=1,
+        linestyle='--')
+ax.scatter(up, r, s=20,
+           color='black',
+           marker='o',
+           edgecolor='black',
+           label='Exp. average')
+ax.scatter(uf, rf, s=20,
+           color='none',
+           marker='o',
+           edgecolor='black',
+           label='Exp. RMS')
+ax.legend(title='4 way',loc='best')
+fig.tight_layout(pad=0.01)
+plt.savefig('Huber1998_pipe_case3/partVelocity/Huber1998_pipe_case3_KEvsRSM_partVel.pdf',
+            format='pdf')
