@@ -246,14 +246,14 @@ ax.scatter(uf, rf, s=20,
            label='Exp. RMS')
 ax.legend(title='4 way',loc='best')
 fig.tight_layout(pad=0.01)
-# plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KEvsRSM_partVel.pdf',
-#             format='pdf')
+plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KEvsRSM_partVel.pdf',
+            format='pdf')
 
 ## Particle velocity - turbulence model - mesh size
 fig, ax = plt.subplots()
 ax.set_ylabel(r'$y/R$')
 ax.set_xlabel(r'$U_g/U_{g,in}$')
-ax.axis([0.4, 1.2, -1, 1])
+ax.axis([0.4, 1.3, -1, 1])
 ax.xaxis.set_major_locator(plt.MultipleLocator(0.1))
 ax.xaxis.set_minor_locator(plt.MultipleLocator(0.05))
 ax.yaxis.set_major_locator(plt.MultipleLocator(0.5))
