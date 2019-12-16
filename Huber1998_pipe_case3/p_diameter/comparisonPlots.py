@@ -23,9 +23,9 @@ r1_ke_coarse, up1_ke_coarse = np.loadtxt('Huber1998_pipe_case3/p_diameter/data/k
 # experimental data
 up, r = np.loadtxt('Huber1998_pipe_case3/p_diameter/data/exp_avg.csv', **opts)
 # simulation: average
-r1_rsm, up1_rsm = np.loadtxt('Huber1998_pipe_case3/partDiameter/data/1wayRSM_avg.curve', **opts2)
-up2_rsm, r2_rsm = np.loadtxt('Huber1998_pipe_case3/partDiameter/data/2wayRSM_avg_18000.csv', **opts)
-up4_rsm, r4_rsm = np.loadtxt('Huber1998_pipe_case3/partDiameter/data/4wayRSM_avg_18000.csv', **opts)
+r1_rsm, up1_rsm = np.loadtxt('Huber1998_pipe_case3/p_diameter/data/1wayRSM_avg.curve', **opts2)
+up2_rsm, r2_rsm = np.loadtxt('Huber1998_pipe_case3/p_diameter/data/2wayRSM_avg_18000.csv', **opts)
+up4_rsm, r4_rsm = np.loadtxt('Huber1998_pipe_case3/p_diameter/data/4wayRSM_avg_18000.csv', **opts)
 # normalization of data
 up1_ke = up1_ke/40e-6
 r1_ke = (r1_ke-0.075)/(0.075)
@@ -73,8 +73,6 @@ ax.scatter(up, r, s=20,
            edgecolor='black',
            label='Exp. average')
 ax.legend(title=r'$k$-$\varepsilon$',loc='upper left')
-ax.arrow(1.3, -0.6, 0, -0.25, head_width=0.04, head_length=0.08, fc='k', ec='k')
-ax.annotate(r'$g$',(1.32,-0.75),fontsize=12)
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_diameter/Huber1998_pipe_case3_KE_partDiam.pdf',
             format='pdf')
@@ -113,7 +111,7 @@ fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_diameter/Huber1998_pipe_case3_RSM_partDiam.pdf',
             format='pdf')
 
-# Particle velocity - KE vs RSM
+# Particle diameter - KE vs RSM
 fig, ax = plt.subplots()
 ax.set_ylabel(r'$y/R$')
 ax.set_xlabel(r'$d_p/d_{p,\mathrm{mean}}$')
@@ -142,7 +140,7 @@ fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_diameter/Huber1998_pipe_case3_KEvsRSM_partDiam.pdf',
             format='pdf')
 
-# Particle velocity - ke - particle integration - mesh size
+# Particle diameter - ke - particle integration - mesh size
 fig, ax = plt.subplots()
 ax.set_ylabel(r'$y/R$')
 ax.set_xlabel(r'$d_p/d_{p,\mathrm{mean}}$')
@@ -169,4 +167,30 @@ ax.plot(up1_ke_coarse, r1_ke_coarse,
 ax.legend(title=r'1 way $k$-$\varepsilon$',loc='upper left')
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_diameter/Huber1998_pipe_case3_KE_analiticVsRK2_meshSize_partDiam.pdf',
+            format='pdf')
+
+# Particle velocity - ke - mesh size
+fig, ax = plt.subplots()
+ax.set_ylabel(r'$y/R$')
+ax.set_xlabel(r'$d_p/d_{p,\mathrm{mean}}$')
+ax.axis([0.8, 1.3, -1, 1])
+ax.xaxis.set_major_locator(plt.MultipleLocator(0.1))
+ax.xaxis.set_minor_locator(plt.MultipleLocator(0.05))
+ax.yaxis.set_major_locator(plt.MultipleLocator(0.5))
+ax.yaxis.set_minor_locator(plt.MultipleLocator(0.25))
+ax.plot(up1_ke, r1_ke,
+        color='black',
+        linewidth=1,
+        linestyle='-',
+        label='Fine grid')
+ax.plot(up1_ke_coarse, r1_ke_coarse,
+        color='black',
+        linewidth=1,
+        linestyle='-.',
+        label='Coarse grid')
+ax.legend(title=r'1 way $k$-$\varepsilon$',loc='upper left')
+ax.arrow(1.25, -0.6, 0, -0.25, head_width=0.02, head_length=0.08, fc='k', ec='k')
+ax.annotate(r'$g$',(1.26,-0.75),fontsize=12)
+fig.tight_layout(pad=0.01)
+plt.savefig('Huber1998_pipe_case3/p_diameter/Huber1998_pipe_case3_KE_meshSize_partDiam.pdf',
             format='pdf')
