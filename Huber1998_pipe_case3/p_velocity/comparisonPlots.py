@@ -14,6 +14,10 @@ opts2 = {'dtype': float,
          'skiprows': 2}
 
 
+# simulation: fluid velocity
+rg1_ke, ug1_ke = np.loadtxt('Huber1998_pipe_case3/p_velocity/data/ke_1way_analit_19630_fluid.curve', **opts2)
+rg1_rsm, ug1_rsm = np.loadtxt('Huber1998_pipe_case3/p_velocity/data/fluidVel_RSM.curve', **opts2)
+rg1_ke_coarse, ug1_ke_coarse = np.loadtxt('Huber1998_pipe_case3/p_velocity/data/ke_1way_analit_coarse_19630_fluid.curve',**opts2)
 # simulation: average
 r1_ke, up1_ke = np.loadtxt('Huber1998_pipe_case3/p_velocity/data/ke_1way_analit_19630_avg.curve', **opts2)
 r1_ke_rk2, up1_ke_rk2 = np.loadtxt('Huber1998_pipe_case3/p_velocity/data/ke_1way_rk2_19630_avg.curve', **opts2)
@@ -36,6 +40,12 @@ rf1_rsm, uf1_rsm = np.loadtxt('Huber1998_pipe_case3/p_velocity/data/1wayRSM_rms.
 rf2_rsm, uf2_rsm = np.loadtxt('Huber1998_pipe_case3/p_velocity/data/2wayRSM_rms_18000.curve', **opts2)
 rf4_rsm, uf4_rsm = np.loadtxt('Huber1998_pipe_case3/p_velocity/data/4wayRSM_rms_18000.curve', **opts2)
 # normalization of data
+ug1_ke = ug1_ke/27
+rg1_ke = (rg1_ke-0.075)/(0.075)
+ug1_rsm = ug1_rsm/27
+rg1_rsm = (rg1_rsm-0.075)/(0.075)
+ug1_ke_coarse = ug1_ke_coarse/27
+rg1_ke_coarse = (rg1_ke_coarse-0.075)/(0.075)
 up1_ke = up1_ke/27
 r1_ke = (r1_ke-0.075)/(0.075)
 up1_ke_coarse = up1_ke_coarse/27
@@ -239,4 +249,31 @@ fig.tight_layout(pad=0.01)
 # plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KEvsRSM_partVel.pdf',
 #             format='pdf')
 
-#FLUID
+## Particle velocity - turbulence model - mesh
+fig, ax = plt.subplots()
+ax.set_ylabel(r'$y/R$')
+ax.set_xlabel(r'$U_p/U_{g,in}$')
+ax.axis([0.4, 1.2, -1, 1])
+ax.xaxis.set_major_locator(plt.MultipleLocator(0.2))
+ax.xaxis.set_minor_locator(plt.MultipleLocator(0.1))
+ax.yaxis.set_major_locator(plt.MultipleLocator(0.5))
+ax.yaxis.set_minor_locator(plt.MultipleLocator(0.25))
+ax.plot(ug1_ke, rg1_ke,
+        color='black',
+        linewidth=1,
+        linestyle='-',
+        label='Analytic')
+ax.plot(ug1_rsm, rg1_rsm,
+        color='black',
+        linewidth=1,
+        linestyle=':',
+        label='RK2')
+ax.plot(ug1_ke_coarse, rg1_ke_coarse,
+        color='black',
+        linewidth=1,
+        linestyle='-.',
+        label='Coarse grid')
+ax.legend(title=r'1 way $k$-$\varepsilon$',loc='best')
+fig.tight_layout(pad=0.01)
+# plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KE_analiticVsRK2_partVel.pdf',
+#             format='pdf')
