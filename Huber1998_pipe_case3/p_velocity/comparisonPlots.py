@@ -121,8 +121,6 @@ ax.scatter(uf, rf, s=20,
            edgecolor='black',
            label='Exp. RMS')
 ax.legend(title=r'$k$-$\varepsilon$',loc='best')
-ax.arrow(1.3, -0.6, 0, -0.25, head_width=0.04, head_length=0.08, fc='k', ec='k')
-ax.annotate(r'$g$',(1.32,-0.75),fontsize=12)
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KE_partVel.pdf',
             format='pdf')
@@ -191,17 +189,17 @@ ax.plot(up1_ke, r1_ke,
         color='black',
         linewidth=1,
         linestyle='-',
-        label='Analytic')
-ax.plot(up1_ke_rk2, r1_ke_rk2,
-        color='black',
-        linewidth=1,
-        linestyle=':',
-        label='RK2')
+        label='Analytic (num. int.)')
 ax.plot(up1_ke_coarse, r1_ke_coarse,
         color='black',
         linewidth=1,
+        linestyle='--',
+        label='Analytic (num. int.) - coarse mesh')
+ax.plot(up1_ke_rk2, r1_ke_rk2,
+        color='black',
+        linewidth=1,
         linestyle='-.',
-        label='Coarse grid')
+        label='RK2 (num. int.)')
 ax.legend(title=r'1 way $k$-$\varepsilon$',loc='best')
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KE_analiticVsRK2_meshSize_partVel.pdf',
@@ -249,7 +247,7 @@ fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KEvsRSM_partVel.pdf',
             format='pdf')
 
-## Particle velocity - turbulence model - mesh size
+## Gas velocity - turbulence model - mesh size
 fig, ax = plt.subplots()
 ax.set_ylabel(r'$y/R$')
 ax.set_xlabel(r'$U_g/U_{g,in}$')
@@ -263,17 +261,59 @@ ax.plot(ug1_ke, rg1_ke,
         linewidth=1,
         linestyle='-',
         label=r'$k$-$\varepsilon$')
-ax.plot(ug1_rsm, rg1_rsm,
-        color='black',
-        linewidth=1,
-        linestyle='--',
-        label='RSM')
 ax.plot(ug1_ke_coarse, rg1_ke_coarse,
         color='black',
         linewidth=1,
+        linestyle='--',
+        label=r'$k$-$\varepsilon$ - coarse mesh')
+ax.plot(ug1_rsm, rg1_rsm,
+        color='black',
+        linewidth=1,
         linestyle='-.',
-        label=r'$k$-$\varepsilon$ - coarse grid')
+        label='RSM')
 ax.legend(loc='best')
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KEvsRSM_meshSize_gasVel.pdf',
+            format='pdf')
+
+
+fig, ax = plt.subplots()
+ax.set_ylabel(r'$y/R$')
+ax.set_xlabel(r'$U_g/U_{g,in}$')
+ax.axis([0.4, 1.2, -1, 1])
+ax.xaxis.set_major_locator(plt.MultipleLocator(0.1))
+ax.xaxis.set_minor_locator(plt.MultipleLocator(0.05))
+ax.yaxis.set_major_locator(plt.MultipleLocator(0.5))
+ax.yaxis.set_minor_locator(plt.MultipleLocator(0.25))
+ax.plot(ug1_ke, rg1_ke,
+        color='black',
+        linewidth=1,
+        linestyle='-',
+        label='Gas - fine mesh')
+ax.plot(ug1_ke_coarse, rg1_ke_coarse,
+        color='black',
+        linewidth=1,
+        linestyle='--',
+        label='Gas - coarse mesh')
+ax.plot(up1_ke, r1_ke,
+        color='black',
+        linewidth=1,
+        linestyle='-',
+        marker='o',
+        markevery=(0.0,0.3),
+        markersize=5,
+        label='Particles - fine mesh')
+ax.plot(up1_ke_coarse, r1_ke_coarse,
+        color='black',
+        linewidth=1,
+        linestyle='--',
+        marker='s',
+        markevery=(0.25,0.3),
+        markersize=5,
+        label='Particles - coarse mesh')
+ax.legend(title=r'$k$-$\varepsilon$',loc='center left')
+ax.arrow(1.15, -0.6, 0, -0.25, head_width=0.03, head_length=0.08, fc='k', ec='k')
+ax.annotate(r'$g$',(1.16,-0.75),fontsize=12)
+fig.tight_layout(pad=0.01)
+plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_meshSize_gasAndPartVel.pdf',
             format='pdf')
