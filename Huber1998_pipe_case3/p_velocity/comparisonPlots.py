@@ -251,7 +251,7 @@ plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KEvsRSM_partVe
 fig, ax = plt.subplots()
 ax.set_ylabel(r'$y/R$')
 ax.set_xlabel(r'$U_g/U_{g,in}$')
-ax.axis([0.4, 1.3, -1, 1])
+ax.axis([0.4, 1.2, -1, 1])
 ax.xaxis.set_major_locator(plt.MultipleLocator(0.1))
 ax.xaxis.set_minor_locator(plt.MultipleLocator(0.05))
 ax.yaxis.set_major_locator(plt.MultipleLocator(0.5))
@@ -261,22 +261,17 @@ ax.plot(ug1_ke, rg1_ke,
         linewidth=1,
         linestyle='-',
         label=r'$k$-$\varepsilon$')
-ax.plot(ug1_ke_coarse, rg1_ke_coarse,
-        color='black',
-        linewidth=1,
-        linestyle='--',
-        label=r'$k$-$\varepsilon$ - coarse mesh')
 ax.plot(ug1_rsm, rg1_rsm,
         color='black',
         linewidth=1,
-        linestyle='-.',
+        linestyle='--',
         label='RSM')
-ax.legend(loc='best')
+ax.legend(title=r'Gas phase',loc='center left')
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KEvsRSM_meshSize_gasVel.pdf',
             format='pdf')
 
-## Gas and particle velocity - mesh size
+# Gas and particle velocity - mesh size
 fig, ax = plt.subplots()
 ax.set_ylabel(r'$y/R$')
 ax.set_xlabel(r'$U_g/U_{g,in}$')
@@ -311,7 +306,7 @@ ax.plot(up1_ke_coarse, r1_ke_coarse,
         markevery=(0.25,0.3),
         markersize=5,
         label='Particles - coarse mesh')
-ax.legend(title=r'$k$-$\varepsilon$',loc='center left')
+ax.legend(title=r'1 way $k$-$\varepsilon$',loc='center left')
 ax.arrow(1.15, -0.6, 0, -0.25, head_width=0.03, head_length=0.08, fc='k', ec='k')
 ax.annotate(r'$g$',(1.16,-0.75),fontsize=12)
 fig.tight_layout(pad=0.01)
