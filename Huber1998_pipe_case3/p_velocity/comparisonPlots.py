@@ -276,7 +276,7 @@ fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_velocity/Huber1998_pipe_case3_KEvsRSM_meshSize_gasVel.pdf',
             format='pdf')
 
-
+## Gas and particle velocity - mesh size
 fig, ax = plt.subplots()
 ax.set_ylabel(r'$y/R$')
 ax.set_xlabel(r'$U_g/U_{g,in}$')
