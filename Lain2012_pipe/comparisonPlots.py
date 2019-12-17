@@ -189,7 +189,7 @@ var_lain, pos_lain = np.loadtxt(lain,
                                 unpack=True)
 fig, ax = plt.subplots()
 ax.set_ylabel(r'$y/R$')
-ax.set_xlabel(r'$U_g/U_{g,in}$')
+ax.set_xlabel(r'$k/U_{g,in}^2$')
 ax.axis([0, 0.01, -1, 1])
 ax.xaxis.set_major_locator(plt.MultipleLocator(0.002))
 ax.xaxis.set_minor_locator(plt.MultipleLocator(0.0005))
