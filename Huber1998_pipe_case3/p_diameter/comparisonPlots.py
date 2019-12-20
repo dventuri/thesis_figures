@@ -163,7 +163,7 @@ ax.plot(up1_ke_coarse, r1_ke_coarse,
         color='black',
         linewidth=1,
         linestyle='-.',
-        label='Coarse grid')
+        label='Coarse mesh')
 ax.legend(title=r'1 way $k$-$\varepsilon$',loc='upper left')
 fig.tight_layout(pad=0.01)
 plt.savefig('Huber1998_pipe_case3/p_diameter/Huber1998_pipe_case3_KE_analiticVsRK2_meshSize_partDiam.pdf',
@@ -182,12 +182,12 @@ ax.plot(up1_ke, r1_ke,
         color='black',
         linewidth=1,
         linestyle='-',
-        label='Fine grid')
+        label='Fine mesh')
 ax.plot(up1_ke_coarse, r1_ke_coarse,
         color='black',
         linewidth=1,
         linestyle='-.',
-        label='Coarse grid')
+        label='Coarse mesh')
 ax.legend(title=r'1 way $k$-$\varepsilon$',loc='upper left')
 ax.arrow(1.25, -0.6, 0, -0.25, head_width=0.02, head_length=0.08, fc='k', ec='k')
 ax.annotate(r'$g$',(1.26,-0.75),fontsize=12)
