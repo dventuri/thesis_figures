@@ -165,28 +165,28 @@ ax[0,1].xaxis.set_major_locator(plt.MultipleLocator(0.5))
 ax[0,1].xaxis.set_minor_locator(plt.MultipleLocator(0.1))
 ax[0,1].yaxis.set_major_locator(plt.MultipleLocator(0.2))
 ax[0,1].yaxis.set_minor_locator(plt.MultipleLocator(0.1))
-pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case04_w_particle_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case06_w_particle_average.curve',
                     R,7.89)
 ax[0,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-.',
         label='1 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case04_w_particle_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case06_w_particle_average.curve',
                     R,7.89)
 ax[0,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='--',
         label='2 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case04_w_particle_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case06_w_particle_average.curve',
                     R,7.89)
 ax[0,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-',
         label='4 way')
-pos_exp, var_exp = np.loadtxt('Tsuji1984_verticalPipe/data/case04_w_particle_average.csv',
+pos_exp, var_exp = np.loadtxt('Tsuji1984_verticalPipe/data/case06_w_particle_average.csv',
                               dtype=float,
                               delimiter=',',
                               unpack=True)
@@ -249,28 +249,28 @@ ax[2,1].xaxis.set_major_locator(plt.MultipleLocator(0.5))
 ax[2,1].xaxis.set_minor_locator(plt.MultipleLocator(0.1))
 ax[2,1].yaxis.set_major_locator(plt.MultipleLocator(0.2))
 ax[2,1].yaxis.set_minor_locator(plt.MultipleLocator(0.1))
-pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case06_w_particle_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case04_w_particle_average.curve',
                     R,7.96)
 ax[2,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-.',
         label='1 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case06_w_particle_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case04_w_particle_average.curve',
                     R,7.96)
 ax[2,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='--',
         label='2 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case06_w_particle_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case04_w_particle_average.curve',
                     R,7.96)
 ax[2,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-',
         label='4 way')
-pos_exp, var_exp = np.loadtxt('Tsuji1984_verticalPipe/data/case06_w_particle_average.csv',
+pos_exp, var_exp = np.loadtxt('Tsuji1984_verticalPipe/data/case04_w_particle_average.csv',
                               dtype=float,
                               delimiter=',',
                               unpack=True)
@@ -430,28 +430,28 @@ ax[0,1].xaxis.set_major_locator(plt.MultipleLocator(0.5))
 ax[0,1].xaxis.set_minor_locator(plt.MultipleLocator(0.1))
 ax[0,1].yaxis.set_major_locator(plt.MultipleLocator(0.2))
 ax[0,1].yaxis.set_minor_locator(plt.MultipleLocator(0.1))
-pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case04_w_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case06_w_average.curve',
                     R,7.89)
 ax[0,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-.',
         label='1 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case04_w_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case06_w_average.curve',
                     R,7.89)
 ax[0,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='--',
         label='2 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case04_w_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case06_w_average.curve',
                     R,7.89)
 ax[0,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-',
         label='4 way')
-pos_exp, var_exp = np.loadtxt('Tsuji1984_verticalPipe/data/case04_w_average.csv',
+pos_exp, var_exp = np.loadtxt('Tsuji1984_verticalPipe/data/case06_w_average.csv',
                               dtype=float,
                               delimiter=',',
                               unpack=True)
@@ -514,28 +514,28 @@ ax[2,1].xaxis.set_major_locator(plt.MultipleLocator(0.5))
 ax[2,1].xaxis.set_minor_locator(plt.MultipleLocator(0.1))
 ax[2,1].yaxis.set_major_locator(plt.MultipleLocator(0.2))
 ax[2,1].yaxis.set_minor_locator(plt.MultipleLocator(0.1))
-pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case06_w_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case04_w_average.curve',
                     R,7.96)
 ax[2,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-.',
         label='1 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case06_w_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case04_w_average.curve',
                     R,7.96)
 ax[2,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='--',
         label='2 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case06_w_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case04_w_average.curve',
                     R,7.96)
 ax[2,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-',
         label='4 way')
-pos_exp, var_exp = np.loadtxt('Tsuji1984_verticalPipe/data/case06_w_average.csv',
+pos_exp, var_exp = np.loadtxt('Tsuji1984_verticalPipe/data/case04_w_average.csv',
                               dtype=float,
                               delimiter=',',
                               unpack=True)
@@ -663,36 +663,36 @@ ax[2,0].annotate(r'$d_{p,\mathrm{mean}}=200 \, \mu$m',(-0.95,6.35e-4),fontsize=8
 #
 ax[0,1].set_ylabel(r'$\alpha_p$')
 ax[0,1].set_xlabel('$x/R$')
-ax[0,1].axis([-1, 1, 0, 2.e-3])
+ax[0,1].axis([-1, 1, 0, 5e-4])
 ax[0,1].ticklabel_format(style='sci', axis='y', scilimits=(0,0))
 ax[0,1].xaxis.set_major_locator(plt.MultipleLocator(0.5))
 ax[0,1].xaxis.set_minor_locator(plt.MultipleLocator(0.1))
-ax[0,1].yaxis.set_major_locator(plt.MultipleLocator(0.5e-3))
-ax[0,1].yaxis.set_minor_locator(plt.MultipleLocator(0.1e-3))
-pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case04_vol_frac_average.curve',
+ax[0,1].yaxis.set_major_locator(plt.MultipleLocator(1e-4))
+ax[0,1].yaxis.set_minor_locator(plt.MultipleLocator(0.2e-4))
+pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case06_vol_frac_average.curve',
                     R,7.89)
 ax[0,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-.',
         label='1 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case04_vol_frac_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case06_vol_frac_average.curve',
                     R,7.89)
 ax[0,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='--',
         label='2 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case04_vol_frac_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case06_vol_frac_average.curve',
                     R,7.89)
 ax[0,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-',
         label='4 way')
-ax[0,1].annotate(r'$\eta=1.1$',(-0.95,1.85e-3),fontsize=8)
-ax[0,1].annotate(r'$U_{g,\mathrm{mean}}=7.96\,$m/s',(-0.95,1.70e-3),fontsize=8)
-ax[0,1].annotate(r'$d_{p,\mathrm{mean}}=500 \, \mu$m',(-0.95,1.55e-3),fontsize=8)
+ax[0,1].annotate(r'$\eta=1.1$',(-0.95,4.75e-4),fontsize=8)
+ax[0,1].annotate(r'$U_{g,\mathrm{mean}}=7.96\,$m/s',(-0.95,4.4e-4),fontsize=8)
+ax[0,1].annotate(r'$d_{p,\mathrm{mean}}=500 \, \mu$m',(-0.95,4e-4),fontsize=8)
 #
 ax[1,1].set_ylabel(r'$\alpha_p$')
 ax[1,1].set_xlabel('$x/R$')
@@ -729,38 +729,38 @@ ax[1,1].annotate(r'$d_{p,\mathrm{mean}}=500 \, \mu$m',(-0.95,0.78e-3),fontsize=8
 #
 ax[2,1].set_ylabel(r'$\alpha_p$')
 ax[2,1].set_xlabel('$x/R$')
-ax[2,1].axis([-1, 1, 0, 5e-4])
+ax[2,1].axis([-1, 1, 0, 2.e-3])
 ax[2,1].ticklabel_format(style='sci', axis='y', scilimits=(0,0))
 ax[2,1].xaxis.set_major_locator(plt.MultipleLocator(0.5))
 ax[2,1].xaxis.set_minor_locator(plt.MultipleLocator(0.1))
-ax[2,1].yaxis.set_major_locator(plt.MultipleLocator(1e-4))
-ax[2,1].yaxis.set_minor_locator(plt.MultipleLocator(0.2e-4))
-pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case06_vol_frac_average.curve',
+ax[2,1].yaxis.set_major_locator(plt.MultipleLocator(0.5e-3))
+ax[2,1].yaxis.set_minor_locator(plt.MultipleLocator(0.1e-3))
+pos, var = readData('Tsuji1984_verticalPipe/data/1way_ke_case04_vol_frac_average.curve',
                     R,7.96)
 ax[2,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-.',
         label='1 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case06_vol_frac_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/2way_ke_case04_vol_frac_average.curve',
                     R,7.96)
 ax[2,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='--',
         label='2 way')
-pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case06_vol_frac_average.curve',
+pos, var = readData('Tsuji1984_verticalPipe/data/4way_ke_case04_vol_frac_average.curve',
                     R,7.96)
 ax[2,1].plot(pos, var,
         color='black',
         linewidth=1,
         linestyle='-',
         label='4 way')
-ax[2,1].annotate(r'$\eta=3.6$',(-0.95,4.75e-4),fontsize=8)
-ax[2,1].annotate(r'$U_{g,\mathrm{mean}}=7.89\,$m/s',(-0.95,4.4e-4),fontsize=8)
-ax[2,1].annotate(r'$d_{p,\mathrm{mean}}=500 \, \mu$m',(-0.95,4e-4),fontsize=8)
-ax[2,1].arrow(0.85, 1.2e-4, 0, -0.8e-4, head_width=0.05, head_length=0.00003, fc='k', ec='k')
-ax[2,1].annotate(r'$g$',(0.87,0.8e-4),fontsize=8)
+ax[2,1].annotate(r'$\eta=3.6$',(-0.95,1.85e-3),fontsize=8)
+ax[2,1].annotate(r'$U_{g,\mathrm{mean}}=7.89\,$m/s',(-0.95,1.70e-3),fontsize=8)
+ax[2,1].annotate(r'$d_{p,\mathrm{mean}}=500 \, \mu$m',(-0.95,1.55e-3),fontsize=8)
+ax[2,1].arrow(0.85, 0.4e-3, 0, -0.30e-3, head_width=0.06, head_length=0.00009, fc='k', ec='k')
+ax[2,1].annotate(r'$g$',(0.87,0.30e-3),fontsize=8)
 #
 fig.tight_layout(pad=0.01)
 plt.savefig('Tsuji1984_verticalPipe/Tsuji1984_verticalPipe_allCases_pVolFrac.pdf',
