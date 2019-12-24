@@ -3,9 +3,9 @@ import re
 import glob
 
 import sys
-sys.path.insert(0,"/home/dventuri/Software/visit2_13_2.linux-x86_64/2.13.2/linux-x86_64/lib/site-packages/")
+sys.path.insert(0,"/home/dventuri/visit/visit2_13_3.linux-x86_64/2.13.3/linux-x86_64/lib/site-packages/")
 import visit
-visit.Launch(vdir="/home/dventuri/Software/visit2_13_2.linux-x86_64/bin")
+visit.Launch(vdir="/home/dventuri/visit/visit2_13_3.linux-x86_64/bin")
 
 
 numbers = re.compile(r'(\d+)')
@@ -15,19 +15,32 @@ def numericalSort(value):
     return parts
 
 
-input_folder = "/home/dventuri/run/CVaras2017_riser/"
+input_folder = "/mnt/c/Users/Pichau/Documents/run/CVaras2017_riser/"
 output_folder = input_folder+"results/png/comp/"
 
-cases = ['case01']
+cases = [
+        #  'case01',
+        #  'case02',
+        #  'case03',
+         'case04'
+        ]
 
 sims = [
-        '4w_01',
-        '4w_02',
-        '4w_03',
-        '4w_04',
-        '4w_05',
-        '4w_06',
-        '4w_07'
+        # 'c01_base',
+        # 'c01_bDiv',
+        # 'c01_bLift',
+        # 'c01_ext',
+        # 'c01_eDiv',
+        # 'c01_eLift',
+        # 'c01_noDivTau',
+        # 'c01_noDivSigma',
+        # 'c01_extNoDivTau',
+        # 'c01_extNoDivSigma',
+        # 'c02_base',
+        # 'c02_bDiv',
+        # 'c02_ext',
+        # 'c03_ext',
+        'c04_ext'
        ]
 
 
