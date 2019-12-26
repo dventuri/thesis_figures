@@ -772,6 +772,60 @@ plt.savefig('CVaras2017_riser/CVaras2017_riser_case01_allHeights_comparisons_sol
             format='pdf')
 
 
+plt.style.use('oneStretched.mplstyle')
+fig, ax = plt.subplots()
+#
+ax.set_ylabel(r'$\alpha_p$')
+ax.set_xlabel('$z$ (m)')
+ax.axis([0, 0.1, 0, 1.5])
+ax.xaxis.set_major_locator(plt.MultipleLocator(0.05))
+ax.xaxis.set_minor_locator(plt.MultipleLocator(0.05/2))
+ax.yaxis.set_major_locator(plt.MultipleLocator(0.3))
+ax.yaxis.set_minor_locator(plt.MultipleLocator(0.1))
+pos, var = readData('CVaras2017_riser/data/c01_ext_case01_solHold',
+                    1,1)
+ax.plot(var, pos,
+        color='black',
+        linewidth=1,
+        linestyle='-',
+        label='Base case')
+pos, var = readData('CVaras2017_riser/data/c01_eDiv_case01_solHold',
+                    1,1)
+ax.plot(var, pos,
+        color='black',
+        linewidth=1,
+        linestyle='-.',
+        label='No transient $\\alpha_p$')
+pos, var = readData('CVaras2017_riser/data/c01_eLift_case01_solHold',
+                    1,1)
+ax.plot(var, pos,
+        color='black',
+        linewidth=1,
+        linestyle='--',
+        label='With lift forces')
+pos, var = readData('CVaras2017_riser/data/c01_extNoDivTau_case01_solHold',
+                    1,1)
+ax.plot(var, pos,
+        color='black',
+        linewidth=1,
+        linestyle=':',
+        label='No resolved forces \n term ($\\nabla \\cdot \\tau_g$)')
+var_exp, pos_exp = np.loadtxt('CVaras2017_riser/data/case01_solHold_exp.csv',
+                               dtype=float,
+                               delimiter=',',
+                               unpack=True)
+ax.scatter(var_exp[::2], pos_exp[::2], s=20,
+           color='none',
+           marker='o',
+           edgecolor='black',
+           label='Carlos Varas et al. \n (2017) - Exp.')
+ax.legend(loc='upper right',title=r'$U_{g,\mathrm{in}} = 6.74$ m/s')
+#
+fig.tight_layout(pad=0.01)
+plt.savefig('CVaras2017_riser/CVaras2017_riser_case01_allHeights_comparisons_solHoldup.pdf',
+            format='pdf')
+
+
 #---------------------------------------------------------------------------------------
 
 
